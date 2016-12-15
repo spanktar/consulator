@@ -1,6 +1,6 @@
 # consulator.sh
 
-# Paste overly-complicated license stuff nobody reads here
+**Paste overly-complicated license stuff nobody reads here**
 
 WHAT: Quick bash convenience function for Consul
 
