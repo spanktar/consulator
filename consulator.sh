@@ -10,6 +10,8 @@ consulator() {
         curl -s $CONSUL_URL/status/$2; echo
     elif [[ "$1" == "kv" ]]; then
         curl -s $CONSUL_URL/kv/$2?raw; echo
+    elif [[ "$1" == "ns" ]]; then
+        dig @$CONSUL_URL -p 8600 $2.service.consul. +tcp +short
     else
         curl -s $CONSUL_URL/catalog/service/$1 | jq .
     fi
